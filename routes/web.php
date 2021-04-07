@@ -27,3 +27,18 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/welcome', function () {
+    return Inertia::render('OurWelcome');
+})->name('welcome');
+
+// Route::middleware(['auth:sanctum', 'verified'])->get('/lalit', function () {
+//     //return Inertia::render('Dashboard');
+//     return "Hello";
+// })->name('dashboard');
+
+// Route::middleware(['auth:sanctum', 'verified'])->get('/welcome', function () {
+//     //return Inertia::render('Dashboard');
+//     $welcome = "Hello, World";
+//     return view("welcome", compact("welcome"));
+// })->name('dashboard');
