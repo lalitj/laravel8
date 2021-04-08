@@ -27,6 +27,12 @@
                                     Welcome
                                 </jet-nav-link>
                             </div>
+
+                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                <jet-nav-link :href="route('task')" :active="route().current('task')">
+                                    Tasks
+                                </jet-nav-link>
+                            </div>
                         </div>
 
                         <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -152,6 +158,10 @@
 
                         <jet-responsive-nav-link :href="route('welcome')" :active="route().current('welcome')">
                             Welcome
+                        </jet-responsive-nav-link>
+
+                        <jet-responsive-nav-link :href="route('task')" :active="route().current('task')">
+                            Tasks
                         </jet-responsive-nav-link>
                     </div>
 
