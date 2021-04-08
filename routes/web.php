@@ -34,8 +34,16 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
         return Inertia::render('OurWelcome');
     })->name('welcome');
 
-    Route::get('task', function () {
-        return Inertia::render('Task');
-    })->name('task');
+//    Route::get('task', function () {
+//        return Inertia::render('Task');
+//    })->name('task');
+
+    Route::resource('task', \App\Http\Controllers\TaskController::class);
+
+    //CRUD => Resourcefull Controller
+    //create => create
+    //Read => Lists => index , Show => show
+    //Update => edit, update
+    //Delete => destroy
 
 });

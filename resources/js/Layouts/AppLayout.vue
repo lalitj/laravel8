@@ -29,7 +29,7 @@
                             </div>
 
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <jet-nav-link :href="route('task')" :active="route().current('task')">
+                                <jet-nav-link :href="route('task.index')" :active="route().current('task.*')">
                                     Tasks
                                 </jet-nav-link>
                             </div>
@@ -160,7 +160,7 @@
                             Welcome
                         </jet-responsive-nav-link>
 
-                        <jet-responsive-nav-link :href="route('task')" :active="route().current('task')">
+                        <jet-responsive-nav-link :href="route('task.index')" :active="route().current('task.*')">
                             Tasks
                         </jet-responsive-nav-link>
                     </div>
