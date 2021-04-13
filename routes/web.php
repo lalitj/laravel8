@@ -15,35 +15,42 @@ use Inertia\Inertia;
 |
 */
 
+// Route::get('/', function () {
+//     return Inertia::render('Welcome', [
+//         'canLogin' => Route::has('login'),
+//         'canRegister' => Route::has('register'),
+//         'laravelVersion' => Application::VERSION,
+//         'phpVersion' => PHP_VERSION,
+//     ]);
+// });
+//
+// Route::middleware(['auth:sanctum', 'verified'])->group(function(){
+//
+//     Route::get('/dashboard', function () {
+//         return Inertia::render('Dashboard');
+//     })->name('dashboard');
+//
+//     Route::get('/welcome', function () {
+//         return Inertia::render('OurWelcome');
+//     })->name('welcome');
+//
+// //    Route::get('task', function () {
+// //        return Inertia::render('Task');
+// //    })->name('task');
+//
+//     Route::resource('/', \App\Http\Controllers\TaskController::class);
+//
+//     //CRUD => Resourcefull Controller
+//     //create => create
+//     //Read => Lists => index , Show => show
+//     //Update => edit, update
+//     //Delete => destroy
+//
+// });
+
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+    return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-    })->name('dashboard');
-
-    Route::get('/welcome', function () {
-        return Inertia::render('OurWelcome');
-    })->name('welcome');
-
-//    Route::get('task', function () {
-//        return Inertia::render('Task');
-//    })->name('task');
-
-    Route::resource('task', \App\Http\Controllers\TaskController::class);
-
-    //CRUD => Resourcefull Controller
-    //create => create
-    //Read => Lists => index , Show => show
-    //Update => edit, update
-    //Delete => destroy
-
-});
+Route::resource('/task', TasksController::class);
