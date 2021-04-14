@@ -24,7 +24,6 @@ class CreateProjectsTable extends Migration
             $table->timestamp('completed_date')->nullable();
             $table->timestamps();
             $table->softDeletes();
-            $table->timestamps();
         });
     }
 

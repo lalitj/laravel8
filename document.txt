@@ -1,0 +1,46 @@
+    users => done
+
+    profiles => manju
+    tasks => jasmeen
+    projects => bhavuk
+    comments => naveen
+
+    clients =>
+    addresses =>
+    restaurant =>
+    bank_details
+    educations
+    experiences
+    documents =>
+    budgets =>
+    followups =
+
+
+Relations:
+One To One =>
+    Task Manager:
+        User => Profile
+
+One To Many
+
+    Overall:
+        user => bank accounts
+        parents => childrens
+
+    Task manager:
+        projects => tasks
+        tasks => comments
+
+Many To Many
+    Task manager:
+        students => subjects
+        projects => users
+
+SQL:
+
+Joins:
+Left Join
+Right Join
+Inner Join
+Outer Join
+Self Join
