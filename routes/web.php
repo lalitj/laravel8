@@ -24,7 +24,7 @@ use Inertia\Inertia;
 //     ]);
 // });
 //
-Route::middleware(['auth:sanctum', 'verified'])->group(function(){
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
@@ -34,9 +34,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
         return Inertia::render('OurWelcome');
     })->name('welcome');
 
-//    Route::get('task', function () {
-//        return Inertia::render('Task');
-//    })->name('task');
+    //    Route::get('task', function () {
+    //        return Inertia::render('Task');
+    //    })->name('task');
 
     Route::resource('/', \App\Http\Controllers\TaskController::class);
 
@@ -46,4 +46,5 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     //Update => edit, update
     //Delete => destroy
 
+    include("sub/client.php");
 });
